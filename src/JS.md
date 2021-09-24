@@ -1,8 +1,8 @@
 ---
-title: JS知识点
+title: JS 知识点
 nav:
-  path: /
-  title: JS知识点
+  path: /js
+  title: JS 知识点
   order: 2
 ---
 

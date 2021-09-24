@@ -1,7 +1,7 @@
 ---
 title: React知识点
 nav:
-  path: /
+  path: /react
   title: React知识点
   order: 3
 ---
