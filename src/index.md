@@ -1,14 +1,14 @@
 ---
-title: 首页
+title: 个人主页
 ---
 
 ```jsx
 import React, { useEffect } from 'react';
 
 export default () => {
-  useEffect(() => {
-    location.href = '/css';
-  }, []);
+  // useEffect(() => {
+  //   location.href = '/css';
+  // }, []);
 
   return (
     <div>
