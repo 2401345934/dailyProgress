@@ -3,7 +3,7 @@ title: JS 知识点
 nav:
   path: /js
   title: JS 知识点
-  order: 2
+  order: 3
 ---
 
 ```jsx

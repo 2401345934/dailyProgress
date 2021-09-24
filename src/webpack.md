@@ -4,7 +4,7 @@ title: Webpack
 nav:
 path: /webpack
 title: Webpack
-order: 6
+order: 5
 
 ---
 

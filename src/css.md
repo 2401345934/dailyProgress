@@ -3,7 +3,7 @@ title: 'CSS 介绍'
 nav:
   path: /css
   title: CSS 知识点
-  order: 1
+  order: 2
 ---
 
 ```jsx
