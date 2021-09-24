@@ -8,6 +8,14 @@ nav:
 
 ```jsx
 import React from 'react';
+import './css.less';
 
-export default () => <h1>Hello qiankun!</h1>;
+export default () => (
+  <h1>
+    官网地址 :
+    <a target="_blank" href="https://umijs.org/zh-CN/plugins/plugin-qiankun">
+      https://umijs.org/zh-CN/plugins/plugin-qiankun
+    </a>
+  </h1>
+);
 ```

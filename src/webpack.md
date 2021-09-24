@@ -1,11 +1,9 @@
 ---
-
 title: Webpack
 nav:
-path: /webpack
-title: Webpack
-order: 5
-
+  path: /webpack
+  title: Webpack
+  order: 5
 ---
 
 ```jsx
