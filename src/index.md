@@ -1,5 +1,6 @@
 ---
 title: 个人主页
+translateHelp: false
 ---
 
 ```jsx
