@@ -1,5 +1,5 @@
 ---
-title: 发布订阅
+title: 在线编辑器Demo
 ---
 
 ```jsx
@@ -13,6 +13,7 @@ export default () => (
     <h3>
       我们接下来的新任务是实现一个同步滚动的编辑与预览区，这是一些在线编辑类Web应用常见的一种交互形式。
     </h3>
+    <h4>输入试试</h4>
     <Mediator></Mediator>
   </div>
 );
