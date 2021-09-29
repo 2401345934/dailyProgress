@@ -3,7 +3,7 @@ title: Git
 nav:
   path: /git
   title: Git
-  order: 216
+  order: 8
 ---
 
 ```jsx

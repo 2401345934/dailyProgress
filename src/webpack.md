@@ -3,7 +3,7 @@ title: Webpack
 nav:
   path: /webpack
   title: Webpack
-  order: 5
+  order: 6
 ---
 
 ```jsx

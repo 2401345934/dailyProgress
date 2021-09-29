@@ -3,7 +3,7 @@ title: 微前端 乾坤
 nav:
   path: /qiankun
   title: 微前端 乾坤
-  order: 6
+  order: 7
 ---
 
 ```jsx
