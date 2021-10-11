@@ -65,3 +65,29 @@ export default () => (
   </div>
 );
 ```
+
+```jsx
+import React from 'react';
+
+export default () => (
+  <div>
+    <h2>从输入一个 URL 地址到浏览器完成渲染的整个过程!</h2>
+    <h3> 这个问题属于老生常谈的经典问题了 下面给出面试简单版作答</h3>
+    <ol>
+      <li> 浏览器地址栏输入 URL 并回车</li>
+      <li>浏览器查找当前 URL 是否存在缓存，并比较缓存是否过期</li>
+      <li>DNS 解析 URL 对应的 IP</li>
+      <li>根据 IP 建立 TCP 连接（三次握手）</li>
+      <li>发送 http 请求</li>
+      <li>服务器处理请求，浏览器接受 HTTP 响应</li>
+      <li>浏览器解析并渲染页面</li>
+      <li>关闭 TCP 连接（四次握手）</li>
+    </ol>
+    <h3>
+      <a target="_blank" href="https://juejin.cn/post/6844903832435032072">
+        复杂版
+      </a>
+    </h3>
+  </div>
+);
+```
