@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "ahooks": "^2.10.11",
+    "antd": "^4.16.13",
     "markdown": "^0.5.0",
     "react-json-view": "^1.21.3"
   }
