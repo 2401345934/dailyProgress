@@ -91,3 +91,124 @@ export default () => (
   </div>
 );
 ```
+
+```jsx
+import React from 'react';
+
+export default () => (
+  <div>
+    <h2>事件循环相关题目--必考（一般是代码输出顺序判断）</h2>
+  </div>
+);
+```
+
+```jsx | pure
+setTimeout(function () {
+  console.log('1');
+}, 0);
+async function async1() {
+  console.log('2');
+  const data = await async2();
+  console.log('3');
+  return data;
+}
+async function async2() {
+  return new Promise((resolve) => {
+    console.log('4');
+    resolve('async2的结果');
+  }).then((data) => {
+    console.log('5');
+    return data;
+  });
+}
+async1().then((data) => {
+  console.log('6');
+  console.log(data);
+});
+new Promise(function (resolve) {
+  console.log('7');
+  //   resolve()
+}).then(function () {
+  console.log('8');
+});
+// 输出结果：247536 async2 的结果 1
+```
+
+```jsx
+import React from 'react';
+
+export default () => (
+  <div>
+    <h2> http 状态码 204 301 302 304 400 401 403 404 含义</h2>
+    <ol>
+      <li>
+        http 状态码 204 （无内容） 服务器成功处理了请求，但没有返回任何内容
+      </li>
+      <li>
+        http 状态码 301 （永久移动） 请求的网页已永久移动到新位置。
+        服务器返回此响应（对 GET 或 HEAD
+        请求的响应）时，会自动将请求者转到新位置。
+      </li>
+      <li>
+        http 状态码 302 （临时移动）
+        服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来进行以后的请求。
+      </li>
+      <li>
+        http 状态码 304 （未修改） 自从上次请求后，请求的网页未修改过。
+        服务器返回此响应时，不会返回网页内容。
+      </li>
+      <li>
+        http 状态码 400 （错误请求） 服务器不理解请求的语法（一般为参数错误）。
+      </li>
+      <li>
+        http 状态码 401 （未授权） 请求要求身份验证。
+        对于需要登录的网页，服务器可能返回此响应。
+      </li>
+      <li>
+        http 状态码 403 （禁止） 服务器拒绝请求。（一般为客户端的用户权限不够）
+      </li>
+      <li>http 状态码 404 （未找到） 服务器找不到请求的网页。</li>
+    </ol>
+  </div>
+);
+```
+
+```jsx
+import React from 'react';
+
+export default () => (
+  <div>
+    <h2> http2.0 做了哪些改进 3.0 呢</h2>
+    <h3> http2.0 特性如下</h3>
+    <ol>
+      <li> 二进制分帧传输</li>
+      <li>多路复用</li>
+      <li>头部压缩</li>
+      <li>服务器推送</li>
+    </ol>
+    <div>Http3.0 相对于 Http2.0 是一种脱胎换骨的改变！</div>
+    <div>
+      http
+      协议是应用层协议，都是建立在传输层之上的。我们也都知道传输层上面不只有 TCP
+      协议，还有另外一个强大的协议 UDP 协议，2.0 和 1.0 都是基于 TCP
+      的，因此都会有 TCP 带来的硬伤以及局限性。而 Http3.0 则是建立在 UDP
+      的基础上。所以其与 Http2.0 之间有质的不同。
+    </div>
+    <h3> http3.0 特性如下</h3>
+    <ol>
+      <li>连接迁移</li>
+      <li>无队头阻塞</li>
+      <li>自定义的拥塞控制</li>
+      <li>前向安全和前向纠错</li>
+    </ol>
+    <h3>
+      <a
+        target="_blank"
+        href="https://blog.csdn.net/m0_60360320/article/details/119812431"
+      >
+        详细细节
+      </a>
+    </h3>
+  </div>
+);
+```

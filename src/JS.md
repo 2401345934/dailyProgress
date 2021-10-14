@@ -136,3 +136,10 @@ export default () => {
   );
 };
 ```
+
+```jsx
+import React from 'react';
+import SymbolComponent from './JS/Symbol';
+
+export default () => <SymbolComponent></SymbolComponent>;
+```
