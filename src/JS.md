@@ -152,15 +152,7 @@ import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 export default () => (
   <div>
     <BackTop />
-  </div>
-);
-```
 
-```jsx
-import React from 'react';
-
-export default () => (
-  <div>
     <h2>路由原理 history 和 hash 两种路由方式的特点</h2>
     <h3>hash 模式</h3>
     <ol>

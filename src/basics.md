@@ -215,12 +215,50 @@ export default () => (
 
 ```jsx
 import React from 'react';
-import { BackTop } from 'antd';
+import { BackTop, Image } from 'antd';
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 
 export default () => (
   <div>
     <BackTop />
+    <h2> 浏览器缓存 </h2>
+    <h3> 协商缓存</h3>
+    一种策略是浏览器先问问服务器有没有变化，没变化就用旧资源。毕竟"问一问"的通信成本，远小于每次重新加载资源的成本。大致流程如下：
+    <div>
+      协商缓存: 向服务器发送请求，服务器会根据这个请求的 Request Header
+      的一些参数来判断是否命中协商缓存，如果命中，则返回 304 状态码并带上新的
+      Response Header 通知浏览器从缓存中读取资源；
+    </div>
+    <Image src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d0ad7ad5454544cc9f6df1a8d9b7cdfb~tplv-k3u1fbpfcp-watermark.awebp" />
+    <div>
+      注：协商缓存一般可在服务端通过设置 Last-Modifed、ETag 等 ResponseHeader
+      实现。
+    </div>
+    <div>注：304 状态码，表示资源未发生变更，可使用浏览器缓存。</div>
+    <h3> 强缓存</h3>
+    <div>
+      这样，通过协商缓存，我们大幅优化了资源未变更时的网络请求，节约大量带宽，网站首屏性能也有不错的提升，美滋滋！
+      然而仔细观察，发现仍然有协商的过程，一百个静态文件就有一百个协商请求。在资源未发生变更时，追求极致的我们也应该优化掉这个协商请求，毕竟没有买卖就没有伤害！
+      和协商缓存对应的是使用强缓存，大概过程如下：
+    </div>
+    <div>
+      强缓存：浏览器不会向服务器发送任何请求，直接从本地缓存中读取文件并返回Status
+      Code: 200 OK。
+    </div>
+    <Image src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5ba66dc474384c9488d1485bef852c2a~tplv-k3u1fbpfcp-watermark.awebp" />
+    <div>注意，缓存生效期间，浏览器是【自言自语】，和服务器无关。</div>
+    <div>
+      From DiskCache：从硬盘中读取。 From MemoryCache：从内存中读取，速度最快。
+    </div>
+    <div>
+      注：强缓存一般可在服务端通过设置 Cache-Control:max-age、Expires 等
+      ResponseHeader 实现。
+    </div>
+    <h3>
+      <a target="_blank" href="https://juejin.cn/post/6844903838768431118">
+        附录：协商缓存和强缓存详解
+      </a>
+    </h3>
   </div>
 );
 ```
